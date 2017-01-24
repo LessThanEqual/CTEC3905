@@ -52,8 +52,13 @@ table {
 
 /* Fonts */
 @font-face {
-  font-family: latoBlack;
-  src: url('../fonts/Lato-Black.tff') format('truetype');
+  font-family: 'latoBlack';
+  src: url('../fonts/Lato-Black.ttf');
+}
+
+/* Body */
+body {
+	font-family: 'latoBlack', Fallback, sans-serif;
 }
 
 /* Navigation */
@@ -67,10 +72,11 @@ nav {
  	left: 0;
  	z-index: 9999;
 	box-shadow: 0 2px 5px black;
-  font-family: latoBlack;
+  font-family: 'latoBlack';
 }
 
 	nav ul {
+		position: relative;
 		display: block;
 		list-style: none;
 		padding: 1em;
@@ -91,20 +97,63 @@ nav {
 	}
 
 
-/* Main containers */
+/* Main container */
 #main-container {
   width: 100%;
   height: 100%;
-  margin-top: 5em;
+  /*margin-top: 4em;*/
+	text-align: center;
 }
 
-.sector {
+/* Section IDs */
+
+#hero {
   width: 100%;
-  min-height: 30em;
-  background-color: green;
+  min-height: 100vh;
+  background-color: #95a3a4;
+	background-image: url(../images/hero.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50%;
 }
-.sector2 {
+	#hero-text {
+		width: 80%;
+		text-align: left;
+		position: absolute;
+		padding: 3vh 0 3vh 3vh;
+		font-size: 3em;
+		color: #fff;
+		background-color: rgba(0, 0, 0, 0.5);
+		text-shadow: 1px 1px #000;
+	}
+
+#skills {
   width: 100%;
-  min-height: 30em;
+	min-height: 100vh;
   background-color: blue;
+}
+	.past-work {
+		min-height: 33vh;
+		background-image: url(../images/site1.jpg);
+		background-size: cover;
+	}
+		.past-work h4 {
+			line-height: 50vh;
+			font-size: 1em;
+			color: #fff;
+			text-align: center;
+			text-shadow: 1px 1px #000;
+		}
+
+#interests {
+	min-height: 100vh;
+	background-image: url(../images/interests.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50%;
+}
+
+#reason {
+	min-height: 100vh;
+	background-color: yellow
 }
