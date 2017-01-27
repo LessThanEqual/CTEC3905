@@ -1,2 +1,1 @@
-# CTEC3905
-Front end web dev coursework
+This is my website for the Front End Web Development assignment 2.
