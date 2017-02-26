@@ -56,10 +56,17 @@ table {
   src: url('../fonts/Lato-Black.ttf');
 }
 
-/* Body */
+/* HTML and Body */
+
+html {
+		scroll-behavior: smooth;
+		height: 100%
+}
+
 body {
 	font-family: 'latoBlack', Fallback, sans-serif;
 	color: #fff;
+	height: 100%;
 }
 
 /* Default text styles */
@@ -119,11 +126,19 @@ p {
 		float: left;
 	}*/
 
+/* Animations */
+@keyframes arrow-bounce {
+	0% {bottom: 0vh}
+	50% {bottom: 10vh}
+	100% {bottom: 0vh}
+}
+
 
 /* Main container */
 #main-container {
+position: relative;
   width: 100%;
-  height: 100%;
+  //min-height: 100%;
   /*margin-top: 4em;*/
 	text-align: left;
 }
@@ -141,7 +156,7 @@ footer {
 
 #hero {
   width: 100%;
-  min-height: 100vh;
+  height: 100%;
   background-color: #95a3a4;
 	background-image: url(../images/hero.jpg);
 	background-size: cover;
@@ -183,7 +198,8 @@ footer {
 }
 
 #welcome {
-	min-height: 50vh;
+	position: relative;
+	min-height: 100:;
 	background: #95a3a4;
 }
 
@@ -208,9 +224,9 @@ footer {
 /* Divs */
 
 .wrapper {
-	max-width: 100%;
+	display: inline-block;
 	margin: 3em;
-	float: left;
+	/*float: left;*/
 
 }
 	.wrapper p {;
@@ -219,7 +235,7 @@ footer {
 
 
 .header-background {
-	position: relative;
+	/*margin-left: auto;*/
 	float: right;
 	padding: 3vh;
 	background-color: rgba(0, 0, 0, 0.5);
@@ -233,4 +249,7 @@ footer {
 	bottom: 0;
 	width: 20%;
 	left: 40%;
+	animation-name: arrow-bounce;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
 }
