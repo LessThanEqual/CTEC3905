@@ -194,10 +194,7 @@ footer {
 }
 
 #reason {
-	min-height: 100vh;
-	background-image: url(../images/reason.jpg);
-	background-size: cover;
-	background-position: center;
+	background: #2196F3;
 }
 
 #welcome {
@@ -209,8 +206,11 @@ footer {
 }
 
 #contact {
-	background: #95a3a4;
+	background: #757575;
 }
+	#contact .header-background {
+	background-color: #212121;
+	}
 
 .banner {
 	background-color: green;
@@ -253,6 +253,9 @@ footer {
 .wrapper-body {
 	width: 100%;
 }
+	.wrapper-body .header-background {
+		background: #BBDEFB;
+	}
 
 .header-background {
 	background-color: #1976D2;
@@ -295,9 +298,9 @@ summary {
 }
 
 article {
-	background-color: #BBDEFB;
+	background-color: #212121;
 	line-height: 3em;
-	color: #000;
+	color: #757575;
 
 }
 
