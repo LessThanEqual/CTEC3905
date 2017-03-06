@@ -195,18 +195,6 @@ footer {
 		margin-left: auto;
 		font-family: 'playfair', Fallback, serif;
 	}
-/* Buttons, tables, etc. */
-
-.btn {
-	font-size: 1.5em;
-	color: #697268;
-	padding: 1em;
-	background-color: #FFC107;
-	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 1em;
-}
 
 /* Divs */
 
