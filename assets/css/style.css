@@ -173,10 +173,11 @@ footer {
 	}
 
 #gallery {
-	background: url(../images/interests.jpg);
+	/*background: url(../images/interests.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-position: 50%;
+	background-position: 50%;*/
+	background: #2196F3;
 }
 
 #reason {
