@@ -89,47 +89,11 @@ h2 {
 
 h3 {
 	font-size: 1.2em;
-	text-shadow: 1px 1px #000;
 }
 
 p {
 	line-height: 2.5em;
 }
-
-/* Navigation */
-/*nav {
-  width: 20%;
-  background-color: #b7d1da;
-  color: #95a3a4;
-  min-height: 20%;
-	position: fixed;
- 	top: 0;
- 	left: 0;
- 	z-index: 9999;
-	box-shadow: 0 2px 5px black;
-  font-family: 'latoBlack';
-}
-
-	nav ul {
-		position: relative;
-		display: block;
-		list-style: none;
-		padding: 1em;
-	}
-		nav ul li {
-			float: left;
-			padding: 10px;
-		}
-		nav button{
-			float: right;
-		}
-
-
-	nav h1 {
-	  font-size: 4em;
-	  font-weight: bold;
-		float: left;
-	}*/
 
 /* Animations */
 @keyframes arrow-bounce {
@@ -139,12 +103,24 @@ p {
 }
 
 
+DETAILS[open] SUMMARY ~ * 
+{
+ animation: sweep .5s ease-in-out;
+}
+
+@keyframes sweep 
+{
+ 0%    {opacity: 0; margin-left: -10px}
+ 100%  {opacity: 1; margin-left: 0px}
+}
+
+
+
 /* Main container */
 #main-container {
 position: relative;
   width: 100%;
   //min-height: 100%;
-  /*margin-top: 4em;*/
 	text-align: left;
 }
 
@@ -152,16 +128,15 @@ position: relative;
 
 footer {
 	text-align: center;
-	background-color: #000;
+	background-color: #212121;
 	width: 100%;
-	padding: 2vh 0 2vh 0;
+	padding: 2em 0 2em 0;
 }
 
 /* Sections */
 
 #hero {
-  width: 100%;
-  height: 100%;
+  height: 100vh;
 	background-image: url(../images/hero.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -185,8 +160,7 @@ footer {
 		width: 100%;
 	}
 
-#interests {
-	min-height: 100vh;
+#gallery {
 	background: url(../images/interests.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -194,10 +168,6 @@ footer {
 }
 
 #reason {
-	background: #2196F3;
-}
-
-#welcome {
 	background: #2196F3;
 }
 
@@ -213,7 +183,6 @@ footer {
 	}
 
 .banner {
-	background-color: green;
 	line-height: 0;
 }
 	.banner img {
@@ -229,14 +198,14 @@ footer {
 /* Buttons, tables, etc. */
 
 .btn {
-	width: 80%;
 	font-size: 1.5em;
 	color: #697268;
-	padding: 3vh 3vh 3vh 3vh;
-	background-color: #b7d1da;
+	padding: 1em;
+	background-color: #FFC107;
 	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
+	margin-top: 1em;
 }
 
 /* Divs */
@@ -248,23 +217,29 @@ footer {
 }
 	.wrapper p {;
 		text-align: justify;
+			
 	}
 
 .wrapper-body {
 	width: 100%;
 }
 	.wrapper-body .header-background {
-		background: #BBDEFB;
+		background: #fff;
 	}
 
+		.wrapper-body .header-background h3 {
+			text-align: left;
+			color: grey;
+		}
+
+
 .header-background {
+	box-sizing: border-box;
 	background-color: #1976D2;
 	width: 100%;
 	text-align: center;
-	padding-top: 2em;
-	padding-bottom: 2em;
+	padding: 2em;
 }
-
 #btn-scroll {
 	margin: 0 auto;
 	position: absolute;
@@ -306,15 +281,15 @@ article {
 
 
 article > details > summary {
-	//font-size: 28px;
-
+	padding: 1em;
 }
 details > p {
-	background-color: #fff;
+	background-color: #BDBDBD;
+	color: white;
 	padding: 2em;
 	line-height: 2em;
 	text-align: justify;
-				box-shadow: inset 0 1px 3px grey; 
+	box-shadow: inset 0 1px 3px grey; 
 
 }
 details details {
@@ -332,8 +307,106 @@ details details summary {
     .header-background {
 		float: right;
 		padding: 3vh;
-		background-color: rgba(0, 0, 0, 0.5);
 		width: 75%;
 		text-align: center;
 	}
+
+	.content-bg {
+		float: right;
+	}
+
+	.banner {
+		float: left;
+		width: 50%;
+		min-height: 500px;
+	}
+		.banner img {
+			position: relative;
+		}
+
+	.another-test {
+		width: 50%;
+		min-height: 500px;
+	}
+}
+
+/* Image Gallery */
+/* Hides the images by default*/
+.mySlides {
+	display:none
+}
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  margin: auto;
+  line-height: 0;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
 }
