@@ -125,6 +125,8 @@ DETAILS[open] SUMMARY ~ *
 	position: relative;
 	width: 100%;
 	text-align: left;
+	line-height: 0;
+	background-color: #2196f3;
 }
 
 /* Semantic tags */
@@ -134,6 +136,10 @@ footer {
 	background-color: #212121;
 	width: 100%;
 	padding: 2em 0 2em 0;
+}
+
+section {
+	line-height: 1em;
 }
 
 /* Sections */
@@ -147,23 +153,37 @@ footer {
 	font-family: 'playfair', Fallback, serif;
 }
 	#hero h1 {
+		line-height: 1em;
 		position: relative;
-		/*vertical align*/
-	top: 50%;
-	transform: 			translateY(-50%);
+		top: 50%;
+		transform: 			translateY(-50%);
 		text-align: center;
 		margin-right: auto;
 		margin-left: auto;
 	}
 
 #banner-cosmo {
+	line-height: 0;
   	width: 100%;
-  	height: 50vh;
+  	height: 25vh;
 	background-image: url(../images/banners/cosmo.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: 50%;
 }
+
+#banner-sera {
+	line-height: 0;
+  	width: 100%;
+  	height: 25vh;
+	background-image: url(../images/banners/sera.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50%;
+}
+
+
+
 
 #decades {
   background-color: #fff;
@@ -173,10 +193,6 @@ footer {
 	}
 
 #gallery {
-	/*background: url(../images/interests.jpg);
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: 50%;*/
 	background: #2196F3;
 }
 
@@ -193,20 +209,6 @@ footer {
 }
 	#contact .header-background {
 	background-color: #212121;
-	}
-
-.banner {
-	line-height: 0;
-}
-	.banner img {
-	width: 100%;
-	}
-
-	.banner h2 {
-		text-align: center;
-		margin-right: auto;
-		margin-left: auto;
-		font-family: 'playfair', Fallback, serif;
 	}
 
 /* Divs */
@@ -235,6 +237,7 @@ footer {
 
 
 .header-background {
+	line-height: 2em;
 	box-sizing: border-box;
 	background-color: #1976D2;
 	width: 100%;
@@ -301,80 +304,21 @@ details details summary {
 
 }
 
-/* Media Queries */
-
-@media only screen and (min-width: 768px) {
-    /* For desktop: */
-    .header-background {
-		float: right;
-		padding: 3vh;
-		width: 75%;
-		text-align: center;
-	}
-
-	.content-bg {
-		float: right;
-	}
-
-	.banner {
-		float: left;
-		width: 50%;
-		min-height: 500px;
-	}
-		.banner img {
-			position: relative;
-		}
-
-	.another-test {
-		width: 50%;
-		min-height: 500px;
-	}
-
-	.article-wrapper {
-
-	}
-		.article-wrapper img {
-			float: left;
-			width: 50%;
-		}
-
-		.article-wrapper article {
-			float: right;
-			width: 50%;
-		}
-
-	.wrapper-body .header-background {
-		width: 100%;
-	}
-
-	#decades img {
-		width: 50%;
-	}
-
-	#banner-cosmo {
-	float: left;
-  	height: 500px;
-  	width: 50%;
-	background-image: url(../images/banners/cosmo.jpg);
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: 50%;
-	font-family: 'playfair', Fallback, serif;
-}
-}
-
 /* Image Gallery */
 /* Hides the images by default*/
 .mySlides {
-	display:none
+	display: none;
 }
+	.myslides img {
+		width: 100%;
+	}
 
 /* Slideshow container */
 .slideshow-container {
 	background-color: #000;
-  position: relative;
-  margin: auto;
-  line-height: 0;
+  	position: relative;
+  	margin: auto;
+  	line-height: 0;
 }
 
 /* Next & previous buttons */
@@ -428,4 +372,150 @@ details details summary {
   -webkit-animation-duration: 1.5s;
   animation-name: fade;
   animation-duration: 1.5s;
+}
+
+
+
+
+
+/* Media Queries */
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    h1 {
+    	font-size: 5em;
+    }
+    .header-background {
+    	width: 70%;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 3vh;
+		text-align: center;
+	}
+
+	.wrapper {
+		margin: 5% 15% 5% 15%;
+	}
+		.wrapper p {
+			font-size: 1.5em;
+		}
+
+	.wrapper-body {
+		height: 100%;
+		width: 70%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.wrapper-body .header-background {
+		width: 100%;
+	}
+
+	#decades {
+		display: inline-block;
+		line-height: 0;
+	}
+	#decades img {
+		width: 100%;
+	}
+
+	#banner-cosmo {
+	width: 70%;	
+	margin-left: auto;
+	margin-right: auto;
+	height: 30vh;
+	}
+
+	#banner-sera {
+  	height: 50vh;
+	}
+
+	#gallery {
+		line-height: 0;
+	}
+
+	#gallery .wrapper {
+		margin-bottom: 0;
+	}
+
+	#btn-scroll {
+		width: 10%;
+		left: 45%;
+	}
+
+				.article-wrapper {
+		display: inline-block;
+	}
+		.article-wrapper img {
+			clear: all;
+		}
+
+		.article-wrapper article {
+			clear: all;
+			width: 100%;
+		}
+
+
+
+
+
+	.slideshow-container {
+		width: 70%;
+	}
+
+	summary {
+	}
+
+	article {
+
+	}
+
+
+	article > details > summary {
+		padding: 1em;
+	}
+	details > p {
+
+	}
+
+	details {
+	}
+
+	details details summary {
+		height: 100%;
+	}
+
+	footer {
+		text-align: center;
+		background-color: #212121;
+		width: 100%;
+		padding: 2em 0 2em 0;
+	}
+
+}
+
+@media only screen and (min-width: 1200px) {
+
+	#decades {
+
+	}
+
+	#decades img {
+		height: 100%;
+		width: 50%;
+		margin-top: auto;
+		margin-bottom: auto;
+	}
+
+		.article-wrapper {
+		display: flex;
+		background-color: #212121;
+	}
+		.article-wrapper img {
+			float: left;
+		}
+
+		.article-wrapper article {
+			float: right;
+			width: 50%;
+		}
 }
