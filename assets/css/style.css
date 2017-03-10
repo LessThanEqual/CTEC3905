@@ -462,22 +462,8 @@ details details summary {
 		width: 70%;
 	}
 
-	summary {
-	}
-
-	article {
-
-	}
-
-
 	article > details > summary {
 		padding: 1em;
-	}
-	details > p {
-
-	}
-
-	details {
 	}
 
 	details details summary {
@@ -493,11 +479,9 @@ details details summary {
 
 }
 
+
+/* For large desktop screens */
 @media only screen and (min-width: 1200px) {
-
-	#decades {
-
-	}
 
 	#decades img {
 		height: 100%;
